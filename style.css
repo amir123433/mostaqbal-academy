@@ -1,0 +1,77 @@
+.features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2 {
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .container {
+        width: min(100% - 24px, 1160px);
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .hero-stats span {
+        font-size: 9px;
+    }
+
+    .hero-card {
+        min-height: 330px;
+        padding: 25px;
+    }
+
+    .book {
+        right: 25px;
+        bottom: 25px;
+        width: 150px;
+        height: 105px;
+    }
+
+    .book-cover strong {
+        font-size: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
