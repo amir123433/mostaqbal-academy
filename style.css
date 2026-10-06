@@ -151,3 +151,40 @@
         font-size: 13px;
     }
 }
+/* =========================
+   REGISTER SELECT
+========================= */
+
+.input-box select {
+    width: 100%;
+    height: 54px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.input-box select option {
+    color: var(--text);
+    background: white;
+}
+
+.terms {
+    margin-top: 18px !important;
+    margin-bottom: 22px !important;
+    cursor: pointer;
+}
+
+.terms span {
+    font-size: 11px;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+        }
