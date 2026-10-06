@@ -1,0 +1,212 @@
+<!-- تأكيد كلمة المرور -->
+            <label for="confirmPassword">
+                تأكيد كلمة المرور
+            </label>
+
+            <div class="input-box">
+
+                <span class="input-icon">🔐</span>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="أعد كتابة كلمة المرور"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="show-password"
+                    id="toggleConfirmPassword"
+                >
+                    👁
+                </button>
+
+            </div>
+
+
+            <!-- الموافقة -->
+            <label class="remember terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <span>
+                    أوافق على شروط استخدام المنصة
+                </span>
+
+            </label>
+
+
+            <!-- إنشاء الحساب -->
+            <button
+                type="submit"
+                class="auth-submit"
+            >
+                إنشاء الحساب
+                <span>←</span>
+            </button>
+
+        </form>
+
+
+        <div class="auth-divider">
+            <span>لديك حساب بالفعل؟</span>
+        </div>
+
+
+        <div class="create-account">
+
+            <a href="login.html">
+                تسجيل الدخول
+            </a>
+
+        </div>
+
+
+        <div class="support-box">
+
+            <span>🎓</span>
+
+            <div>
+
+                <strong>
+                    ابدأ رحلتك التعليمية
+                </strong>
+
+                <small>
+                    كورسات • فيديوهات • امتحانات • متابعة
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="auth-footer">
+        © 2026 Future Academy
+    </div>
+
+</main>
+
+
+<script>
+
+/* =========================
+   إظهار كلمة المرور
+========================= */
+
+const password =
+    document.getElementById("password");
+
+const confirmPassword =
+    document.getElementById("confirmPassword");
+
+
+document
+    .getElementById("togglePassword")
+    .addEventListener("click", function () {
+
+        if (password.type === "password") {
+
+            password.type = "text";
+            this.textContent = "🙈";
+
+        } else {
+
+            password.type = "password";
+            this.textContent = "👁";
+
+        }
+
+    });
+
+
+document
+    .getElementById("toggleConfirmPassword")
+    .addEventListener("click", function () {
+
+        if (confirmPassword.type === "password") {
+
+            confirmPassword.type = "text";
+            this.textContent = "🙈";
+
+        } else {
+
+            confirmPassword.type = "password";
+            this.textContent = "👁";
+
+        }
+
+    });
+
+
+/* =========================
+   إنشاء الحساب
+========================= */
+
+document
+    .getElementById("registerForm")
+    .addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const firstName =
+            document.getElementById("firstName").value.trim();
+
+        const lastName =
+            document.getElementById("lastName").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const grade =
+            document.getElementById("grade").value;
+
+        const passwordValue =
+            password.value;
+
+        const confirmValue =
+            confirmPassword.value;
+
+
+        if (passwordValue.length < 6) {
+
+            alert("كلمة المرور يجب أن تكون 6 أحرف أو أكثر.");
+            return;
+
+        }
+
+
+        if (passwordValue !== confirmValue) {
+
+            alert("كلمتا المرور غير متطابقتين.");
+            return;
+
+        }
+
+
+        if (!grade) {
+
+            alert("من فضلك اختر الصف الدراسي.");
+            return;
+
+        }
+
+
+        alert(
+            "تم تجهيز بيانات حسابك بنجاح.\n\n" +
+            "سيتم ربط إنشاء الحساب بقاعدة البيانات في المرحلة القادمة."
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
