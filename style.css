@@ -1,4 +1,6 @@
-.features-grid {
+body {
+  background: red !important;
+}.features-grid {
         grid-template-columns: 1fr 1fr;
     }
 
