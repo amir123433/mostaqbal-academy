@@ -1,8 +1,7 @@
 body {
-  background: red !important;
-}.features-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    background: #07111f;
+    color: #eef2f7;
+}
 
     .about-content {
         grid-template-columns: 1fr;
