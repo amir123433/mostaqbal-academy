@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>إنشاء حساب الطالب | Mostaqbal Academy</title>
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--text:#eef4ff;--muted:#9aacc4;--line:#233b58;--accent:#4f8cff;--accent2:#72e0c0;--danger:#ff7b86}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 15% 10%,#17345a 0,transparent 32%),radial-gradient(circle at 90% 85%,#123c43 0,transparent 28%),var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;padding:28px 14px}
+    .page{width:100%;max-width:1000px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .intro,.form-card{border:1px solid rgba(140,175,220,.18);border-radius:26px;background:rgba(13,27,45,.88);box-shadow:0 24px 70px #0005;backdrop-filter:blur(12px)}
+    .intro{padding:38px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+    .intro:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:#4f8cff1c;top:-90px;left:-80px}
+    .brand{display:flex;align-items:center;gap:12px;position:relative}
+    .brand-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--accent),#725dff);font-size:24px;box-shadow:0 10px 28px #4f8cff40}
+    .brand strong{display:block;font-size:18px}.brand small{color:var(--muted);display:block;margin-top:5px}
+    .hero{position:relative;margin:54px 0 38px}
+    .eyebrow{display:inline-flex;padding:8px 12px;border:1px solid #4f8cff55;background:#4f8cff12;border-radius:99px;color:#a9c8ff;font-size:12px}
+    h1{font-size:clamp(28px,4vw,42px);line-height:1.4;margin:18px 0 14px}
+    .hero p{color:var(--muted);line-height:1.9;margin:0}
+    .benefits{display:grid;gap:13px;position:relative}
+    .benefit{display:flex;align-items:center;gap:12px;color:#dce8f8;font-size:14px}
+    .benefit span{width:34px;height:34px;border-radius:11px;background:#ffffff0d;display:grid;place-items:center}
+    .form-card{padding:34px}
+    .form-heading{margin-bottom:24px}.form-heading h2{margin:0 0 8px;font-size:25px}.form-heading p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{margin-bottom:16px;min-width:0}.field.full{grid-column:1/-1}
+    label{display:block;font-size:13px;margin-bottom:8px;color:#d9e6f7}
+    .input-wrap{display:flex;align-items:center;gap:9px;background:#071321;border:1px solid var(--line);border-radius:13px;padding:0 12px;transition:.2s}
+    .input-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px #4f8cff20}
+    .input-wrap .ico{font-size:16px;opacity:.9}
+    input,select{font:inherit;color:var(--text);background:transparent;border:0;outline:0;width:100%;min-width:0;padding:14px 0}
+    input::placeholder{color:#71839c}select option{background:var(--panel);color:var(--text)}
+    .show-password{border:0;background:transparent;color:#a9bfdc;cursor:pointer;font-size:17px;padding:5px}
+    .terms{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:13px;line-height:1.7;margin:3px 0 19px}
+    .terms input{width:17px;height:17px;accent-color:var(--accent);margin-top:2px;flex-shrink:0}
+    .submit{width:100%;border:0;border-radius:13px;padding:15px 18px;background:linear-gradient(110deg,#4f8cff,#665dff);color:white;font:inherit;font-weight:bold;cursor:pointer;box-shadow:0 12px 25px #4f8cff2b;transition:transform .2s,opacity .2s}
+    .submit:hover{transform:translateY(-1px)}.submit:disabled{opacity:.65;cursor:wait;transform:none}
+    .message{display:none;border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+    .message.show{display:block}.message.error{background:#ff7b8617;border:1px solid #ff7b8644;color:#ffb0b7}.message.success{background:#72e0c015;border:1px solid #72e0c044;color:#a8f1db}
+    .auth-divider{text-align:center;color:var(--muted);font-size:13px;margin:20px 0 12px}
+    .login-link{display:block;text-align:center;text-decoration:none;color:#a9c8ff;font-weight:bold;padding:8px}
+    .support{display:flex;align-items:center;gap:12px;margin-top:23px;padding:14px;border:1px solid #ffffff12;background:#ffffff06;border-radius:14px}
+    .support .cap{font-size:25px}.support strong{font-size:13px;display:block}.support small{display:block;color:var(--muted);margin-top:5px;font-size:11px;line-height:1.6}
+    footer{text-align:center;color:#71839c;font-size:11px;margin-top:23px}
+    @media(max-width:760px){.page{max-width:520px;grid-template-columns:1fr}.intro{padding:25px}.hero{margin:30px 0 24px}.benefits{grid-template-columns:1fr 1fr;gap:10px}.benefit{font-size:12px}.form-card{padding:25px}}
+    @media(max-width:420px){.grid{grid-template-columns:1fr;gap:0}.field.full{grid-column:auto}.benefits{grid-template-columns:1fr}.form-card{padding:21px}.intro{padding:22px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <div>
+        <div class="brand"><div class="brand-icon">🎓</div><div><strong>Mostaqbal Academy</strong><small>منصتك التعليمية لمستقبل أفضل</small></div></div>
+        <div class="hero">
+          <span class="eyebrow">✦ ابدأ رحلتك الآن</span>
+          <h1>خطوة جديدة نحو<br>مستقبل أقوى</h1>
+          <p>أنشئ حسابك وابدأ متابعة كورسات اللغة الإنجليزية، وشاهد الدروس، واختبر مستواك وتقدّمك في مكان واحد.</p>
+        </div>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span>▶️</span> فيديوهات شرح منظمة</div>
+        <div class="benefit"><span>📝</span> امتحانات وتدريبات</div>
+        <div class="benefit"><span>📈</span> متابعة التقدم الدراسي</div>
+        <div class="benefit"><span>🔒</span> حساب خاص بك</div>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <div class="form-heading"><h2>إنشاء حساب الطالب</h2><p>اكتب بياناتك بدقة لإنشاء حساب جديد.</p></div>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <form id="registerForm">
+        <div class="grid">
+          <div class="field">
+            <label for="firstName">الاسم الأول</label>
+            <div class="input-wrap"><span class="ico">👤</span><input id="firstName" name="firstName" autocomplete="given-name" placeholder="الاسم الأول" required maxlength="50"></div>
+          </div>
+          <div class="field">
+            <label for="lastName">اسم العائلة</label>
+            <div class="input-wrap"><span class="ico">🪪</span><input id="lastName" name="lastName" autocomplete="family-name" placeholder="اسم العائلة" required maxlength="50"></div>
+          </div>
+          <div class="field full">
+            <label for="email">البريد الإلكتروني</label>
+            <div class="input-wrap"><span class="ico">✉️</span><input id="email" name="email" type="email" autocomplete="email" placeholder="example@email.com" required maxlength="254" dir="ltr"></div>
+          </div>
+          <div class="field full">
+            <label for="phone">رقم الهاتف</label>
+            <div class="input-wrap"><span class="ico">📱</span><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="رقم الهاتف" required maxlength="20" dir="ltr"></div>
+          </div>
+          <div class="field full">
+            <label for="grade">الصف الدراسي</label>
+            <div class="input-wrap"><span class="ico">📚</span><select id="grade" name="grade" required><option value="">اختر الصف الدراسي</option><option value="الأول الثانوي">الأول الثانوي</option><option value="الثاني الثانوي">الثاني الثانوي</option><option value="الثالث الثانوي">الثالث الثانوي</option></select></div>
+          </div>
+          <div class="field">
+            <label for="password">كلمة المرور</label>
+            <div class="input-wrap"><span class="ico">🔑</span><input id="password" name="password" type="password" autocomplete="new-password" placeholder="6 أحرف على الأقل" minlength="6" required dir="ltr"><button class="show-password" type="button" data-toggle="password" aria-label="إظهار كلمة المرور">👁</button></div>
+          </div>
+          <div class="field">
+            <label for="confirmPassword">تأكيد كلمة المرور</label>
+            <div class="input-wrap"><span class="ico">🔐</span><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="أعد كتابة كلمة المرور" minlength="6" required dir="ltr"><button class="show-password" type="button" data-toggle="confirmPassword" aria-label="إظهار تأكيد كلمة المرور">👁</button></div>
+          </div>
+        </div>
+        <label class="terms"><input type="checkbox" id="terms" required><span>أوافق على شروط استخدام المنصة وأؤكد أن البيانات التي أدخلتها صحيحة.</span></label>
+        <button class="submit" id="submitButton" type="submit">إنشاء الحساب <span aria-hidden="true">←</span></button>
+      </form>
+      <div class="auth-divider">لديك حساب بالفعل؟</div>
+      <a class="login-link" href="login.html">تسجيل الدخول</a>
+      <div class="support"><span class="cap">🎓</span><div><strong>ابدأ رحلتك التعليمية</strong><small>كورسات • فيديوهات • امتحانات • متابعة</small></div></div>
+      <footer>© 2026 Mostaqbal Academy</footer>
+    </section>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getDatabase, ref, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+    // إعدادات مشروع Firebase الخاص بمنصة Mostaqbal Academy
+    const firebaseConfig = {
+      apiKey: "PASTE_YOUR_FIREBASE_WEB_API_KEY_HERE",
+      authDomain: "mostaqbal-academy-5f51b.firebaseapp.com",
+      databaseURL: "https://mostaqbal-academy-5f51b-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "mostaqbal-academy-5f51b",
+      storageBucket: "mostaqbal-academy-5f51b.firebasestorage.app",
+      messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID_HERE",
+      appId: "PASTE_YOUR_FIREBASE_APP_ID_HERE"
+    };
+
+    const form = document.getElementById("registerForm");
+    const messageBox = document.getElementById("message");
+    const submitButton = document.getElementById("submitButton");
+    const passwordInput = document.getElementById("password");
+    const confirmInput = document.getElementById("confirmPassword");
+
+    function showMessage(text, type = "error") {
+      messageBox.textContent = text;
+      messageBox.className = `message show ${type}`;
+    }
+
+    document.querySelectorAll("[data-toggle]").forEach(button => {
+      button.addEventListener("click", () => {
+        const target = document.getElementById(button.dataset.toggle);
+        const visible = target.type === "password";
+        target.type = visible ? "text" : "password";
+        button.textContent = visible ? "🙈" : "👁";
+      });
+    });
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      messageBox.className = "message";
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const phone = document.getElementById("phone").value.trim();
+      const grade = document.getElementById("grade").value;
+      const password = passwordInput.value;
+
+      if (password.length < 6) {
+        showMessage("كلمة المرور يجب أن تكون 6 أحرف على الأقل.");
+        return;
+      }
+      if (password !== confirmInput.value) {
+        showMessage("كلمتا المرور غير متطابقتين.");
+        return;
+      }
+      if (!firebaseConfig.apiKey || firebaseConfig.apiKey.includes("PASTE_") ||
+          !firebaseConfig.messagingSenderId || firebaseConfig.messagingSenderId.includes("PASTE_") ||
+          !firebaseConfig.appId || firebaseConfig.appId.includes("PASTE_")) {
+        showMessage("إعدادات Firebase غير مكتملة. افتح إعدادات مشروعك وانسخ apiKey وmessagingSenderId وappId إلى هذا الملف أولًا.");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "جارٍ إنشاء الحساب...";
+      try {
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getDatabase(app);
+        const credential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = credential.user;
+
+        await updateProfile(user, { displayName: `${firstName} ${lastName}`.trim() });
+        await set(ref(db, `students/${user.uid}`), {
+          uid: user.uid,
+          firstName,
+          lastName,
+          fullName: `${firstName} ${lastName}`.trim(),
+          email,
+          phone,
+          grade,
+          createdAt: serverTimestamp()
+        });
+
+        showMessage("تم إنشاء حسابك وحفظ بياناتك بنجاح. سيتم تحويلك إلى صفحة تسجيل الدخول.", "success");
+        form.reset();
+        setTimeout(() => { window.location.href = "login.html"; }, 1800);
+      } catch (error) {
+        console.error("Registration error:", error);
+        const messages = {
+          "auth/email-already-in-use": "هذا البريد الإلكتروني مسجل بالفعل. جرّب تسجيل الدخول.",
+          "auth/invalid-email": "صيغة البريد الإلكتروني غير صحيحة.",
+          "auth/weak-password": "كلمة المرور ضعيفة؛ استخدم 6 أحرف على الأقل.",
+          "auth/operation-not-allowed": "فعّل طريقة تسجيل الدخول بالبريد الإلكتروني وكلمة المرور من Firebase Authentication.",
+          "auth/network-request-failed": "تعذر الاتصال بالإنترنت. تحقق من الاتصال وحاول مجددًا.",
+          "auth/invalid-api-key": "مفتاح Firebase API غير صحيح. راجع إعدادات تطبيق الويب في Firebase.",
+          "PERMISSION_DENIED": "تم إنشاء حساب الدخول، لكن قاعدة البيانات رفضت حفظ بيانات الطالب. راجع قواعد Realtime Database."
+        };
+        showMessage(messages[error.code] || (error.message?.includes("PERMISSION_DENIED")
+          ? "تم إنشاء حساب الدخول، لكن قاعدة البيانات رفضت حفظ بيانات الطالب. راجع قواعد Realtime Database."
+          : `تعذر إكمال التسجيل: ${error.message || "حدث خطأ غير معروف"}`));
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'إنشاء الحساب <span aria-hidden="true">←</span>';
+      }
+    });
+  </script>
+</body>
+</html>
