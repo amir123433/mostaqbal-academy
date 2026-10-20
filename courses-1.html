@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الكورسات | Mostaqbal Academy</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#12243a;--text:#eef4ff;--muted:#9fb0c8;--blue:#60a5fa;--line:#233650;--green:#34d399;--orange:#fbbf24}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#102746 0,var(--bg) 58%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+.wrap{width:min(1050px,92%);margin:auto;padding:24px 0 48px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#2563eb,#38bdf8);display:grid;place-items:center;font-size:24px}.brand h1{font-size:18px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}.btn{border:1px solid var(--line);background:#14263c;color:var(--text);padding:10px 14px;border-radius:12px;text-decoration:none;cursor:pointer;font:inherit}.btn.primary{background:linear-gradient(135deg,#2563eb,#0284c7);border:0;font-weight:700}.hero{padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(125deg,#102b4a,#0d1b2d 70%);margin-bottom:22px}.eyebrow{color:#93c5fd;font-size:13px;font-weight:700}.hero h2{font-size:clamp(24px,4vw,36px);margin:9px 0}.hero p{color:var(--muted);line-height:1.8;margin:0;max-width:680px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:21px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:15px}.card{background:rgba(13,27,45,.94);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px}.course-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#17385b;font-size:24px}.card h3{margin:0;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}.meta{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;color:#cbdaf0;border:1px solid #2a405c;padding:5px 9px;border-radius:99px}.card .btn{margin-top:auto}.notice{border:1px solid #705b27;background:#332b16;color:#fde68a;padding:13px 15px;border-radius:13px;line-height:1.7;font-size:13px;margin-top:20px}.panel{display:none;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px;margin-top:20px}.panel.show{display:block}.panel[hidden]{display:none!important}.lesson button{margin-right:auto}.lesson>div:nth-child(2){flex:1}.panel h2{margin-top:0}.lesson{display:flex;gap:12px;align-items:center;background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:13px;margin:10px 0}.lesson .num{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:#1d4268;color:#bfdbfe;flex-shrink:0}.lesson p{margin:4px 0 0;color:var(--muted);font-size:13px}.empty{color:var(--muted);padding:14px;border:1px dashed #38506c;border-radius:13px;line-height:1.8}.form-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.form-row input{flex:1;min-width:190px;background:#071525;border:1px solid #38506c;color:var(--text);border-radius:12px;padding:12px;font:inherit}.status{margin-top:12px;font-size:14px;color:var(--muted)}.footer{margin-top:28px;text-align:center;color:#8194ae;font-size:12px}
+@media(max-width:520px){.top{align-items:flex-start}.hero{padding:20px}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">🎓</div><div><h1>Mostaqbal Academy</h1><p>خطوتك الجاية في اللغة الإنجليزية</p></div></div>
+  <a class="btn" href="student.html">ملف الطالب ↗</a>
+</header>
+<section class="hero">
+  <div class="eyebrow">LEARN • PRACTICE • ACHIEVE</div>
+  <h2>اختار كورسك وابدأ التعلّم</h2>
+  <p>افتح الكورس بالكود الخاص بك. مدة التفعيل أسبوع من وقت استخدام الكود، وبعد انتهاء المدة تحتاج إلى كود تجديد جديد.</p>
+</section>
+<div class="section-head"><div><h2>الكورسات المتاحة</h2><p>اضغط على الكورس لعرض محتواه وإدخال كود التفعيل.</p></div></div>
+<section class="grid" id="courseGrid">
+  <article class="card">
+    <div class="course-icon">🇬🇧</div><div><h3>اللغة الإنجليزية</h3><p>دروس الوحدات، فيديوهات الشرح، تدريبات وامتحانات.</p></div>
+    <div class="meta"><span class="pill">كود أسبوعي</span><span class="pill">دروس وامتحانات</span></div>
+    <button class="btn primary" onclick="openCourse('english')">فتح الكورس</button>
+  </article>
+  <article class="card">
+    <div class="course-icon">📝</div><div><h3>التدريبات والامتحانات</h3><p>مكان مخصص لاختبارات الوحدات ومراجعة مستواك.</p></div>
+    <div class="meta"><span class="pill">تابع للكورس</span></div>
+    <button class="btn" onclick="openCourse('english')">عرض التفاصيل</button>
+  </article>
+</section>
+<section class="panel" id="coursePanel">
+  <button class="btn" onclick="closeCourse()">← رجوع للكورسات</button>
+  <h2 style="margin-top:18px">🇬🇧 كورس اللغة الإنجليزية</h2>
+  <p style="color:var(--muted);line-height:1.8">أدخل كود التفعيل الذي حصلت عليه. عند ربط نظام التحقق الآمن، سيتم بدء مدة السبعة أيام من لحظة التفعيل.</p>
+  <div class="form-row"><input id="activationCode" type="text" autocomplete="off" placeholder="اكتب كود التفعيل هنا"><button class="btn primary" onclick="redeemCode()">تفعيل الكورس</button></div>
+  <div class="status" id="activationStatus" role="status" aria-live="polite"></div>
+  <div class="section-head"><div><h2>محتوى الكورس</h2><p>اختر الدرس لعرض تفاصيله. تشغيل الفيديوهات للمشتركين بعد ربط الحماية.</p></div></div>
+  <div id="lessonsContainer"></div>
+  <div class="panel show" id="videoPanel" style="margin-top:16px" hidden>
+    <h2 id="videoTitle">عنوان الدرس</h2>
+    <p id="videoDescription" style="color:var(--muted)"></p>
+    <div class="empty" id="videoPlaceholder">الفيديو غير متاح حاليًا. سيُفتح للمشتركين بعد ربط التحقق الآمن.</div>
+  </div>
+  <div class="notice">تنبيه: واجهة الكورس جاهزة كبداية، لكن التحقق الفعلي من الأكواد وحماية الفيديوهات لم يتم تفعيله بعد. لا تدخل أو توزّع أكواد حقيقية قبل إعداد التحقق الآمن في Firebase.</div>
+</section>
+<div class="notice">الاشتراك والدفع الإلكتروني مؤجلان حاليًا كما طلبت. سيتم تجهيز تفعيل الأكواد لمدة 7 أيام في الخطوة التالية باستخدام قواعد Firebase آمنة، بدل تخزين الأكواد السرية داخل هذه الصفحة.</div>
+<div class="footer">© Mostaqbal Academy — منصة تعليمية للغة الإنجليزية</div>
+</div>
+<script>
+function openCourse(id){document.getElementById('coursePanel').classList.add('show');document.getElementById('coursePanel').scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('activationStatus').textContent='';}
+function closeCourse(){document.getElementById('coursePanel').classList.remove('show');document.getElementById('courseGrid').scrollIntoView({behavior:'smooth',block:'start'});}
+const courseUnits = [
+  {title:'الوحدة الأولى',lessons:[
+    {title:'الدرس الأول: مقدمة الوحدة',description:'فيديو شرح الدرس الأول — أضف الرابط المعتمد لاحقًا',videoUrl:''},
+    {title:'الدرس الثاني: Grammar',description:'شرح القواعد مع أمثلة وتطبيقات',videoUrl:''},
+    {title:'الدرس الثالث: Vocabulary',description:'شرح الكلمات واستخدامها في الجمل',videoUrl:''}
+  ]},
+  {title:'الوحدة الثانية',lessons:[
+    {title:'الدرس الأول: مقدمة الوحدة الثانية',description:'شرح وتمارين الوحدة الثانية',videoUrl:''}
+  ]}
+];
+function renderLessons(){
+ const container=document.getElementById('lessonsContainer');
+ container.replaceChildren();
+ courseUnits.forEach((unit,ui)=>{
+  const heading=document.createElement('h3');heading.textContent=unit.title;container.append(heading);
+  unit.lessons.forEach((lesson,li)=>{
+   const item=document.createElement('div');item.className='lesson';
+   const num=document.createElement('div');num.className='num';num.textContent=String(li+1).padStart(2,'0');
+   const details=document.createElement('div');const title=document.createElement('strong');title.textContent=lesson.title;
+   const desc=document.createElement('p');desc.textContent=lesson.description;details.append(title,desc);
+   const button=document.createElement('button');button.className='btn';button.textContent='تفاصيل الدرس';button.addEventListener('click',()=>showLesson(ui,li));
+   item.append(num,details,button);container.append(item);
+  });
+ });
+}
+function showLesson(ui,li){
+ const lesson=courseUnits[ui].lessons[li];
+ const panel=document.getElementById('videoPanel');panel.hidden=false;
+ document.getElementById('videoTitle').textContent=lesson.title;
+ document.getElementById('videoDescription').textContent=lesson.description;
+ document.getElementById('videoPlaceholder').textContent='🔒 الفيديو غير متاح حاليًا. لا يتم تشغيل روابط الفيديو إلا بعد تفعيل التحقق من اشتراك الطالب على الخادم.';
+ panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+renderLessons();
+function redeemCode(){const code=document.getElementById('activationCode').value.trim();const status=document.getElementById('activationStatus');if(!code){status.textContent='اكتب كود التفعيل أولًا.';return;}status.textContent='نموذج إدخال الكود جاهز، لكن التحقق الآمن غير مربوط بعد. لن يتم تفعيل الكورس حتى نضيف إعداد Firebase الآمن.';}
+</script>
+</body>
+</html>
