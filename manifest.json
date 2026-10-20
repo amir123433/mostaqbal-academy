@@ -1,0 +1,12 @@
+{
+  "name": "منصة المستقبل التعليمية",
+  "short_name": "المستقبل",
+  "description": "منصة المستقبل لتعلم اللغة الإنجليزية",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/mostaqbal-academy/",
+  "scope": "/mostaqbal-academy/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f"
+}
