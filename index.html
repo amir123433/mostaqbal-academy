@@ -194,5 +194,14 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('PWA Ready'))
+      .catch(error => console.error(error));
+  });
+}
+    </script>
 </body>
   </html>
