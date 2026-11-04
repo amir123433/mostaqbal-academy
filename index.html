@@ -204,5 +204,28 @@ if ('serviceWorker' in navigator) {
   });
 }
     </script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDtyyxxeUvmjon7tivpS1Kga2GdXlnCaQ4",
+    authDomain: "mostaqbal-academy-5f51b.firebaseapp.com",
+    databaseURL: "https://mostaqbal-academy-5f51b-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "mostaqbal-academy-5f51b",
+    storageBucket: "mostaqbal-academy-5f51b.firebasestorage.app",
+    messagingSenderId: "398450175799",
+    appId: "1:398450175799:web:83a302dac12387bc3234b2"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      window.location.replace("./student.html");
+    }
+  });
+</script>
 </body>
-  </html>
+</html>
