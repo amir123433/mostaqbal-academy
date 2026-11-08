@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f"><title>إدارة الدعم | Mostaqbal Academy</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#11243b;--text:#eef4ff;--muted:#9aacc4;--line:#233b58;--accent:#4f8cff;--green:#72e0c0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#17345a 0,transparent 27%),var(--bg);font-family:Tahoma,Arial,sans-serif;color:var(--text)}
+main{max-width:1050px;margin:auto;padding:24px}header,.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}
+h1{margin:0 0 8px;font-size:24px}p{color:var(--muted);line-height:1.8}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+button,select,textarea{font:inherit}button{border:0;border-radius:10px;background:var(--accent);color:white;padding:11px 15px;font-weight:bold;cursor:pointer}button.secondary{background:#1a3048;border:1px solid var(--line)}button:disabled{opacity:.5}
+select,textarea{background:#071321;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px}.ticket{background:var(--panel2);border:1px solid var(--line);border-radius:15px;padding:17px;margin:12px 0}
+.ticket-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.muted{color:var(--muted);font-size:12px}.body{white-space:pre-wrap;line-height:1.9}.reply{width:100%;min-height:95px;margin:12px 0;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.status{border-radius:30px;background:#4f8cff22;color:#b8d0ff;padding:5px 10px;font-size:11px}.empty{text-align:center;padding:25px;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
+</style></head><body><main>
+<header><div class="toolbar"><div><h1>🛠️ إدارة الدعم والمساعدة</h1><p>استقبال ومتابعة طلبات الدعم الفني والأسئلة العلمية للطلاب.</p></div><button class="secondary" id="refresh">تحديث الطلبات</button></div><div id="status" class="muted">جارٍ التحقق من صلاحية الإدارة...</div></header>
+<section class="panel"><div class="toolbar"><strong>طلبات الطلاب</strong><select id="filter"><option value="all">كل الطلبات</option><option value="technical">الدعم الفني</option><option value="academic">الدعم العلمي</option><option value="new">الجديدة</option><option value="in_progress">قيد المراجعة</option><option value="answered">تم الرد</option><option value="closed">مغلقة</option></select></div><div id="tickets" class="empty">جارٍ التحميل...</div></section>
+</main>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getDatabase,ref,get,update} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+const ADMIN_UID="hxjYPK2UQNdQF6UtdMHA6YtgWTF2";
+const firebaseConfig={apiKey:"AIzaSyDtyyxxeUvmjon7tivpS1Kga2GdXlnCaQ4",authDomain:"mostaqbal-academy-5f51b.firebaseapp.com",databaseURL:"https://mostaqbal-academy-5f51b-default-rtdb.europe-west1.firebasedatabase.app",projectId:"mostaqbal-academy-5f51b",appId:"1:398450175799:web:83a302dac12387bc3234b2"};
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
+const $=id=>document.getElementById(id);let rows=[];
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function date(v){return v?new Date(Number(v)).toLocaleString("ar-EG"): "غير متاح";}
+function status(v){return ({new:"جديد",in_progress:"قيد المراجعة",answered:"تم الرد",closed:"مغلق"}[v]||"جديد");}
+function render(){
+ const f=$("filter").value;
+ const list=rows.filter(([id,t])=>f==="all"||t.type===f||t.status===f);
+ const area=$("tickets");
+ if(!list.length){area.className="empty";area.textContent="لا توجد طلبات مطابقة.";return;}
+ area.className="";
+ area.innerHTML=list.map(([id,t])=>`<article class="ticket">
+ <div class="ticket-head"><strong>${t.type==="academic"?"📚 سؤال علمي":"🛠️ دعم فني"}: ${esc(t.subject)}</strong><span class="status">${status(t.status)}</span></div>
+ <p class="muted">الطالب: ${esc(t.ownerName)} — ${esc(t.ownerEmail)}<br>التاريخ: ${date(t.createdAt)}<br>رقم الطلب: ${esc(id)}</p>
+ <div class="body">${esc(t.message)}</div>
+ <label class="muted" for="reply-${id}">رد الإدارة</label><textarea class="reply" id="reply-${id}" placeholder="اكتب ردك للطالب...">${esc(t.adminReply||"")}</textarea>
+ <div class="actions"><select id="state-${id}"><option value="new" ${t.status==="new"?"selected":""}>جديد</option><option value="in_progress" ${t.status==="in_progress"?"selected":""}>قيد المراجعة</option><option value="answered" ${t.status==="answered"?"selected":""}>تم الرد</option><option value="closed" ${t.status==="closed"?"selected":""}>مغلق</option></select><button data-save="${esc(id)}">حفظ الرد والحالة</button></div>
+ </article>`).join("");
+ area.querySelectorAll("[data-save]").forEach(btn=>btn.addEventListener("click",()=>save(btn.dataset.save,btn)));
+}
+async function load(){
+ $("tickets").className="empty";$("tickets").textContent="جارٍ تحميل الطلبات...";
+ try{const snap=await get(ref(db,"supportTicketsAdmin"));const data=snap.exists()?snap.val():{};rows=Object.entries(data).filter(([id,t])=>t&&typeof t==="object").sort((a,b)=>Number(b[1].createdAt||0)-Number(a[1].createdAt||0));render();}
+ catch(e){$("tickets").className="empty";$("tickets").textContent="تعذر تحميل الطلبات: "+(e.code||e.message);}
+}
+async function save(id,btn){
+ const reply=$("reply-"+id).value.trim(),state=$("state-"+id).value;
+ btn.disabled=true;btn.textContent="جارٍ الحفظ...";
+ try{const patch={adminReply:reply,status:state,repliedAt:Date.now()};
+ const item=rows.find(([key])=>key===id)?.[1];
+ await update(ref(db,"supportTicketsAdmin/"+id),patch);
+ if(item?.ownerUid) await update(ref(db,"supportTicketsByUser/"+item.ownerUid+"/"+id),patch);$("status").textContent="تم حفظ الرد وتحديث حالة الطلب.";await load();}
+ catch(e){$("status").textContent="تعذر الحفظ: "+(e.code||e.message);}
+ finally{btn.disabled=false;btn.textContent="حفظ الرد والحالة";}
+}
+$("refresh").addEventListener("click",load);$("filter").addEventListener("change",render);
+onAuthStateChanged(auth,user=>{if(!user){$("status").textContent="سجّل الدخول بحساب الإدارة أولًا.";return;}if(user.uid!==ADMIN_UID){$("status").textContent="غير مصرح لك بفتح صفحة الإدارة.";return;}$("status").textContent="تم التحقق من صلاحية الإدارة.";load();});
+</script></body></html>
