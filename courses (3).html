@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الكورسات | Mostaqbal Academy</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#12243a;--text:#eef4ff;--muted:#9fb0c8;--blue:#60a5fa;--line:#233650;--green:#34d399;--orange:#fbbf24}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#102746 0,var(--bg) 58%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+.wrap{width:min(1050px,92%);margin:auto;padding:24px 0 48px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#2563eb,#38bdf8);display:grid;place-items:center;font-size:24px}.brand h1{font-size:18px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}.btn{border:1px solid var(--line);background:#14263c;color:var(--text);padding:10px 14px;border-radius:12px;text-decoration:none;cursor:pointer;font:inherit}.btn.primary{background:linear-gradient(135deg,#2563eb,#0284c7);border:0;font-weight:700}.hero{padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(125deg,#102b4a,#0d1b2d 70%);margin-bottom:22px}.eyebrow{color:#93c5fd;font-size:13px;font-weight:700}.hero h2{font-size:clamp(24px,4vw,36px);margin:9px 0}.hero p{color:var(--muted);line-height:1.8;margin:0;max-width:680px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:21px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:15px}.card{background:rgba(13,27,45,.94);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px}.course-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#17385b;font-size:24px}.card h3{margin:0;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}.meta{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;color:#cbdaf0;border:1px solid #2a405c;padding:5px 9px;border-radius:99px}.card .btn{margin-top:auto}.notice{border:1px solid #705b27;background:#332b16;color:#fde68a;padding:13px 15px;border-radius:13px;line-height:1.7;font-size:13px;margin-top:20px}.panel{display:none;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px;margin-top:20px}.panel.show{display:block}.panel[hidden]{display:none!important}.lesson button{margin-right:auto}.lesson>div:nth-child(2){flex:1}.panel h2{margin-top:0}.lesson{display:flex;gap:12px;align-items:center;background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:13px;margin:10px 0}.lesson .num{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:#1d4268;color:#bfdbfe;flex-shrink:0}.lesson p{margin:4px 0 0;color:var(--muted);font-size:13px}.empty{color:var(--muted);padding:14px;border:1px dashed #38506c;border-radius:13px;line-height:1.8}.form-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.form-row input{flex:1;min-width:190px;background:#071525;border:1px solid #38506c;color:var(--text);border-radius:12px;padding:12px;font:inherit}.status{margin-top:12px;font-size:14px;color:var(--muted)}.footer{margin-top:28px;text-align:center;color:#8194ae;font-size:12px}
+@media(max-width:520px){.top{align-items:flex-start}.hero{padding:20px}.section-head{align-items:flex-start;flex-direction:column}}
+
+.chapter-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;margin:12px 0;overflow:hidden}.chapter-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px;background:transparent;border:0;color:var(--text);font:inherit;text-align:right;cursor:pointer}.chapter-toggle strong{font-size:16px}.chapter-toggle span{color:#93c5fd;font-size:13px}.chapter-body{padding:0 14px 12px}.lesson{display:block!important;padding:14px!important}.lesson-head{display:flex;align-items:center;gap:12px}.lesson-head .details{flex:1}.lesson-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.lesson-actions a,.lesson-actions button{font:inherit;text-decoration:none}.lesson-actions .btn{margin:0}.resource-link{background:#14263c;border:1px solid var(--line);color:#dbeafe;padding:9px 12px;border-radius:10px;text-decoration:none;font-size:13px}.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:13px;background:#000;margin-top:10px}.solution-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.resource-title{color:#93c5fd;font-size:13px;margin-top:12px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">🎓</div><div><h1>Mostaqbal Academy</h1><p>خطوتك الجاية في اللغة الإنجليزية</p></div></div>
+  <a class="btn" href="student.html">ملف الطالب ↗</a>
+</header>
+<section class="hero">
+  <div class="eyebrow">LEARN • PRACTICE • ACHIEVE</div>
+  <h2>اختار كورسك وابدأ التعلّم</h2>
+  <p>اعرض محتوى اللغة الإنجليزية المخصص لمرحلتك الدراسية، وابدأ التعلّم بعد تفعيل الكورس.</p>
+</section>
+<div class="section-head"><div><h2>الكورسات المتاحة</h2><p>افتح كورس اللغة الإنجليزية لعرض محتوى مرحلتك وإدخال كود التفعيل.</p></div></div>
+<section class="grid" id="courseGrid">
+  <article class="card">
+    <div class="course-icon">🇬🇧</div><div><h3>اللغة الإنجليزية</h3><p>دروس الوحدات، فيديوهات الشرح، تدريبات وامتحانات.</p></div>
+    <div class="meta"><span class="pill">كود أسبوعي</span><span class="pill">دروس وامتحانات</span></div>
+    <button class="btn primary" onclick="openCourse('english')">فتح الكورس</button>
+  </article>
+  <article class="card">
+    <div class="course-icon">📝</div><div><h3>التدريبات والامتحانات</h3><p>مكان مخصص لاختبارات الوحدات ومراجعة مستواك.</p></div>
+    <div class="meta"><span class="pill">تابع للكورس</span></div>
+    <button class="btn" onclick="openCourse('english')">عرض التفاصيل</button>
+  </article>
+</section>
+<section class="card" id="freeWorkshop" hidden style="margin-top:20px">
+  <div class="meta"><span class="pill" style="color:#86efac;border-color:#166534">مجانية للجميع</span><span class="pill">Units 1 • 2 • 3</span></div>
+  <h2 style="margin:0">🎬 ورشة مراجعة Units 1, 2 &amp; 3</h2>
+  <p>ورشة شاملة لمراجعة الوحدات الأولى والثانية والثالثة في اللغة الإنجليزية، بدون كود اشتراك.</p>
+  <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#050c17">
+    <iframe id="workshopVideo" src="https://www.youtube.com/embed/wp7pp7lkRkM?rel=0&amp;enablejsapi=1" title="ورشة مراجعة Units 1, 2 &amp; 3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;width:100%;height:100%;border:0"></iframe>
+  </div>
+  <div style="padding:16px;border:1px solid #285482;border-radius:14px;background:#10243c;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+    <div><strong>📝 امتحان ورشة Units 1 و2 و3</strong><p style="margin:5px 0 0;color:#9fb0c8">20 سؤال اختيار من متعدد • 30 دقيقة • النتيجة بعد التسليم</p></div>
+    <a class="btn primary" href="exam.html">ابدأ امتحان الورشة ←</a>
+  </div>
+</section>
+<section class="panel" id="coursePanel">
+  <button class="btn" onclick="closeCourse()">← رجوع للكورسات</button>
+  <h2 style="margin-top:18px">🇬🇧 كورس اللغة الإنجليزية</h2>
+  <p style="color:var(--muted);line-height:1.8">أدخل الكود الفردي المرسل إليك. الكود مخصص لحسابك فقط، ويبدأ الاشتراك لمدة 7 أيام من أول تفعيل.</p>
+  <div class="form-row"><input id="activationCode" type="text" autocomplete="off" placeholder="اكتب كود التفعيل هنا"><button class="btn primary" onclick="redeemCode()">تفعيل الكورس</button></div>
+  <div class="status" id="activationStatus" role="status" aria-live="polite"></div>
+  <div class="section-head"><div><h2>محتوى الكورس</h2><p>تُفتح تفاصيل الدروس بعد التحقق من اشتراكك النشط.</p></div></div>
+  <div id="lessonsContainer"><div class="empty">جارٍ تحميل المحاضرات...</div></div>
+  <div class="panel show" id="videoPanel" style="margin-top:16px" hidden>
+    <h2 id="videoTitle">عنوان الدرس</h2>
+    <p id="videoDescription" style="color:var(--muted)"></p>
+    <div id="lessonResources"></div>
+  </div>
+  <div class="notice">يُسمح بتفعيل الكود مرة واحدة للحساب المحدد فقط. تنتهي صلاحية الوصول تلقائيًا بعد 7 أيام من أول تفعيل.</div>
+</section>
+<div class="notice" id="coursePageNotice">أكواد كورس اللغة الإنجليزية فردية، ولا يمكن استخدامها من حساب آخر. الدفع الإلكتروني ما زال مؤجلًا.</div>
+<div class="footer">© Mostaqbal Academy — منصة تعليمية للغة الإنجليزية</div>
+</div>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import { getDatabase, ref, push, set, get, update } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDtyyxxeUvmjon7tivpS1Kga2GdXlnCaQ4',
+  authDomain: 'mostaqbal-academy-5f51b.firebaseapp.com',
+  databaseURL: 'https://mostaqbal-academy-5f51b-default-rtdb.europe-west1.firebasedatabase.app',
+  projectId: 'mostaqbal-academy-5f51b',
+  appId: '1:398450175799:web:83a302dac12387bc3234b2'
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
+let currentUser = null;
+let courseAccessActive = false;
+let activeCourseExpiry = 0;
+let courseContent = {chapters:{}};
+let studentGradeKey='';
+const gradeLabels={first_secondary:'أولى ثانوي',second_secondary:'تانية ثانوي',third_secondary:'تالتة ثانوي'};
+function gradeKeyOf(value){const v=String(value||'').trim();if(['الأول الثانوي','أولى ثانوي','first_secondary'].includes(v))return 'first_secondary';if(['الثاني الثانوي','تانية ثانوي','second_secondary'].includes(v))return 'second_secondary';if(['الثالث الثانوي','تالتة ثانوي','third_secondary'].includes(v))return 'third_secondary';return '';}
+let resolveAuth;
+const authReady = new Promise(resolve => { resolveAuth = resolve; });
+
+onAuthStateChanged(auth, user => {
+  currentUser = user || null;
+  resolveAuth();
+  if (user) {
+    logActivity('courses_page_opened', { page: 'courses.html' });
+    loadCourseAccess();
+  } else {
+    document.getElementById('freeWorkshop').hidden = true;
+    courseAccessActive = false;
+    renderLessons();
+    document.getElementById('activationStatus').textContent = 'سجّل الدخول بحساب الطالب قبل تفعيل الكورس.';
+  }
+});
+
+async function logActivity(action, details = {}) {
+  try {
+    await authReady;
+    if (!currentUser) return;
+    const entry = push(ref(db, `activityLogs/${currentUser.uid}`));
+    await set(entry, {
+      action,
+      details,
+      at: Date.now(),
+      page: 'courses.html'
+    });
+  } catch (error) {
+    console.warn('Activity log was not saved:', error);
+  }
+}
+
+function openCourse(id) {
+  document.getElementById('coursePanel').classList.add('show');
+  document.getElementById('coursePanel').scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('activationStatus').textContent = '';
+  logActivity('course_opened', { courseId: id, courseName: 'اللغة الإنجليزية', gradeKey: studentGradeKey });
+}
+function closeCourse() {
+  document.getElementById('coursePanel').classList.remove('show');
+  document.getElementById('courseGrid').scrollIntoView({behavior:'smooth',block:'start'});
+}
+const workshop = {
+  title:'ورشة مراجعة Units 1, 2 & 3',
+  description:'ورشة شاملة على الوحدات الأولى والثانية والثالثة',
+  videoUrl:'https://youtu.be/wp7pp7lkRkM'
+};
+function videoEmbed(url){
+  try{const u=new URL(url);let id='';if(u.hostname.includes('youtu.be'))id=u.pathname.slice(1);else if(u.hostname.includes('youtube.com')){if(u.pathname.startsWith('/embed/'))id=u.pathname.split('/')[2];else id=u.searchParams.get('v')||'';}return id?'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id):url;}catch{return '';}}
+function renderLessons() {
+  const container=document.getElementById('lessonsContainer');container.replaceChildren();
+  const chapters=Object.entries(courseContent.chapters||{});
+  if(!chapters.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=courseAccessActive?'لم تتم إضافة محاضرات لهذا الكورس حتى الآن.':'محتوى المحاضرات يظهر بعد تفعيل الكود الأسبوعي.';container.append(empty);return;}
+  chapters.forEach(([cid,chapter],index)=>{
+    const card=document.createElement('section');card.className='chapter-card';
+    const toggle=document.createElement('button');toggle.className='chapter-toggle';
+    const title=document.createElement('strong');title.textContent=chapter.title||`الوحدة ${index+1}`;
+    const count=document.createElement('span');count.textContent=`${Object.keys(chapter.lectures||{}).length} محاضرة　⌄`;
+    toggle.append(title,count);const body=document.createElement('div');body.className='chapter-body';body.hidden=true;
+    toggle.onclick=()=>{body.hidden=!body.hidden;count.textContent=`${Object.keys(chapter.lectures||{}).length} محاضرة　${body.hidden?'⌄':'⌃'}`};
+    Object.entries(chapter.lectures||{}).forEach(([lid,lesson],li)=>{
+      const item=document.createElement('div');item.className='lesson';const head=document.createElement('div');head.className='lesson-head';
+      const num=document.createElement('div');num.className='num';num.textContent=String(li+1).padStart(2,'0');const details=document.createElement('div');details.className='details';
+      const name=document.createElement('strong');name.textContent=lesson.title||'محاضرة';const desc=document.createElement('p');desc.textContent=lesson.description||'محاضرة تعليمية';details.append(name,desc);head.append(num,details);item.append(head);
+      const actions=document.createElement('div');actions.className='lesson-actions';const open=document.createElement('button');open.className='btn primary';open.textContent=courseAccessActive?'فتح المحاضرة':'🔒 مقفل';open.disabled=!courseAccessActive;open.onclick=()=>showLesson(chapter,lesson,li);actions.append(open);
+      if(courseAccessActive&&lesson.fileUrl){const file=document.createElement('a');file.className='resource-link';file.href=lesson.fileUrl;file.target='_blank';file.rel='noopener';file.textContent='📄 ملف المحاضرة';actions.append(file)}
+      if(courseAccessActive&&(lesson.solutions||[]).length){(lesson.solutions||[]).forEach((url,i)=>{const a=document.createElement('a');a.className='resource-link';a.href=url;a.target='_blank';a.rel='noopener';a.textContent=`▶ فيديو الحل ${i+1}`;actions.append(a)})}
+      item.append(actions);body.append(item);
+    });card.append(toggle,body);container.append(card);
+  });
+}
+function showLesson(chapter,lesson,li){
+  if(!courseAccessActive){document.getElementById('activationStatus').textContent='فعّل اشتراكك أولًا لفتح الدروس.';return;}
+  const panel=document.getElementById('videoPanel'),resources=document.getElementById('lessonResources');resources.replaceChildren();
+  document.getElementById('videoTitle').textContent=lesson.title||'المحاضرة';document.getElementById('videoDescription').textContent=lesson.description||'';
+  const video=videoEmbed(lesson.videoUrl||'');
+  if(video){const label=document.createElement('div');label.className='resource-title';label.textContent='🎬 فيديو الشرح';const frame=document.createElement('iframe');frame.className='video-frame';frame.src=video;frame.title='فيديو شرح المحاضرة';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.allowFullscreen=true;resources.append(label,frame)}else{const no=document.createElement('div');no.className='empty';no.textContent='لم يتم إضافة فيديو شرح لهذه المحاضرة بعد.';resources.append(no)}
+  if(lesson.fileUrl){const label=document.createElement('div');label.className='resource-title';label.textContent='📄 ملف المحاضرة';const a=document.createElement('a');a.className='resource-link';a.href=lesson.fileUrl;a.target='_blank';a.rel='noopener';a.textContent='فتح / تحميل الملف';resources.append(label,a)}
+  if((lesson.solutions||[]).length){const label=document.createElement('div');label.className='resource-title';label.textContent='✍️ فيديوهات حل الأسئلة';resources.append(label);lesson.solutions.forEach((url,i)=>{const sub=document.createElement('div');sub.className='resource-title';sub.textContent=`فيديو الحل ${i+1}`;const embed=videoEmbed(url);if(embed){const frame=document.createElement('iframe');frame.className='video-frame';frame.src=embed;frame.title=`فيديو الحل ${i+1}`;frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.allowFullscreen=true;resources.append(sub,frame)}else{const a=document.createElement('a');a.className='resource-link';a.href=url;a.target='_blank';a.rel='noopener';a.textContent=`فتح فيديو الحل ${i+1}`;resources.append(sub,a)}})}
+  panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+  logActivity('lesson_opened',{courseId:'english',unit:chapter.title||'',lessonTitle:lesson.title||'',lessonIndex:li+1});
+}
+async function loadCourseContent(){try{let snap=await get(ref(db,`courseContent/${studentGradeKey}/english`));if(!snap.exists()&&studentGradeKey==='third_secondary')snap=await get(ref(db,'courseContent/english'));courseContent=snap.exists()?snap.val():{chapters:{}};courseContent.chapters=courseContent.chapters||{};}catch(e){console.warn('Course content unavailable',e);courseContent={chapters:{}};}renderLessons();}
+renderLessons();
+
+async function loadCourseAccess(){
+  const status=document.getElementById('activationStatus');
+  if(!currentUser){courseAccessActive=false;renderLessons();return;}
+  try{
+    const studentSnap=await get(ref(db,`students/${currentUser.uid}`));
+    const studentData=studentSnap.exists()?studentSnap.val():{};
+    studentGradeKey=studentData.gradeKey||gradeKeyOf(studentData.grade);
+    document.getElementById('freeWorkshop').hidden = studentGradeKey !== 'third_secondary';
+    if(!studentGradeKey){courseAccessActive=false;courseContent={chapters:{}};status.textContent='لم يتم تحديد مرحلتك الدراسية. تواصل مع الدعم أو الإدارة.';renderLessons();return;}
+    let saved=await get(ref(db,`students/${currentUser.uid}/courseAccess/${studentGradeKey}/english/code`));
+    if(!saved.exists()&&studentGradeKey==='third_secondary'){const legacy=await get(ref(db,`students/${currentUser.uid}/courseAccess/english/code`));if(legacy.exists()&&legacy.val()){saved=legacy;await set(ref(db,`students/${currentUser.uid}/courseAccess/${studentGradeKey}/english/code`),legacy.val());}}
+    if(!saved.exists()||!saved.val()){
+      courseAccessActive=false;activeCourseExpiry=0;courseContent={chapters:{}};
+      status.textContent=`كورس ${gradeLabels[studentGradeKey]} غير مفعّل. أدخل الكود المخصص لمرحلتك.`;
+      renderLessons();return;
+    }
+    const code=String(saved.val()).trim().toUpperCase();
+    const snap=await get(ref(db,`courseCodes/${code}`));
+    if(!snap.exists())throw new Error('الكود غير متاح لهذا الحساب.');
+    const data=snap.val(),expiry=Number(data.expiresAt||0);
+    courseAccessActive=data.assignedUid===currentUser.uid&&data.redeemedBy===currentUser.uid&&data.courseId==='english'&&(!data.gradeKey||data.gradeKey===studentGradeKey)&&expiry>Date.now();
+    activeCourseExpiry=courseAccessActive?expiry:0;
+    status.textContent=courseAccessActive
+      ? '✅ اشتراكك مفعّل حتى '+new Date(expiry).toLocaleString('ar-EG')+'.'
+      : '⌛ انتهت مدة الاشتراك أو أن الكود غير صالح لهذا الحساب.';
+    if(courseAccessActive) await loadCourseContent(); else renderLessons();
+  }catch(e){
+    courseAccessActive=false;activeCourseExpiry=0;renderLessons();
+    status.textContent=e.code==='PERMISSION_DENIED'
+      ? '⌛ انتهت مدة الوصول إلى الكورس.'
+      : 'تعذر التحقق من الاشتراك: '+(e.message||e.code||'خطأ غير معروف');
+  }
+}
+async function redeemCode() {
+  const code=document.getElementById('activationCode').value.trim().toUpperCase();
+  const status=document.getElementById('activationStatus');
+  if(!currentUser){status.textContent='سجّل الدخول أولًا بحساب الطالب.';return;}
+  if(!studentGradeKey){
+    const st=await get(ref(db,`students/${currentUser.uid}`));
+    studentGradeKey=st.val()?.gradeKey||gradeKeyOf(st.val()?.grade);
+  }
+  if(!studentGradeKey){status.textContent='لم يتم تحديد مرحلتك الدراسية. تواصل مع الإدارة.';return;}
+  if(!/^[A-HJ-NP-Z2-9]{10}$/.test(code)){status.textContent='اكتب كودًا صحيحًا مكوّنًا من 10 أحرف/أرقام.';return;}
+
+  status.textContent='جارٍ قراءة بيانات الكود...';
+  const codeRef=ref(db,'courseCodes/'+code);
+  try{
+    // اقرأ السجل أولًا حتى لا تُجهض المعاملة بسبب قيمة محلية null قبل وصول بيانات الخادم.
+    const before=await get(codeRef);
+    if(!before.exists()){
+      status.textContent='الكود غير موجود. راجع الحروف والأرقام المدخلة.';
+      return;
+    }
+    const info=before.val()||{};
+    if(info.courseId!=='english'){
+      status.textContent='هذا الكود ليس مخصصًا لكورس اللغة الإنجليزية.';
+      return;
+    }
+    if(info.assignedUid!==currentUser.uid){
+      status.textContent='هذا الكود مخصص لحساب طالب آخر.';
+      return;
+    }
+    if(info.gradeKey && info.gradeKey!==studentGradeKey){
+      status.textContent='المرحلة الدراسية للكود لا تطابق مرحلة حسابك.';
+      return;
+    }
+    if(info.redeemedBy){
+      status.textContent=info.redeemedBy===currentUser.uid
+        ? 'الكود سبق تفعيله على حسابك. جارٍ تحديث حالة الاشتراك...'
+        : 'هذا الكود تم استخدامه بالفعل.';
+      if(info.redeemedBy===currentUser.uid){
+        await set(ref(db,`students/${currentUser.uid}/courseAccess/${studentGradeKey}/english/code`),code);
+        await loadCourseAccess();
+      }
+      return;
+    }
+
+    status.textContent='تم التحقق من بيانات الكود، جارٍ تفعيل الاشتراك...';
+    const result=await runTransaction(codeRef,current=>{
+      if(!current || current.courseId!=='english' || current.assignedUid!==currentUser.uid ||
+         (current.gradeKey && current.gradeKey!==studentGradeKey) || current.redeemedBy) return;
+      const activatedAt=Date.now();
+      return {...current,redeemedBy:currentUser.uid,activatedAt,expiresAt:activatedAt+7*24*60*60*1000};
+    },{applyLocally:false});
+
+    if(!result.committed){
+      const latest=await get(codeRef);
+      const d=latest.val()||{};
+      if(!latest.exists()) status.textContent='الكود لم يعد موجودًا في قاعدة البيانات.';
+      else if(d.redeemedBy) status.textContent=d.redeemedBy===currentUser.uid?'الكود مفعّل بالفعل على حسابك. حدّث الصفحة.':'الكود تم تفعيله من حساب آخر.';
+      else if(d.assignedUid!==currentUser.uid) status.textContent='الكود مخصص لحساب مختلف عن الحساب المفتوح.';
+      else if(d.courseId!=='english') status.textContent='الكود لا يخص كورس اللغة الإنجليزية.';
+      else if(d.gradeKey && d.gradeKey!==studentGradeKey) status.textContent='الصف الدراسي للكود لا يطابق صف حسابك.';
+      else status.textContent='لم تكتمل المعاملة. أعد المحاولة، وإذا تكررت أرسل صورة رسالة الخطأ.';
+      return;
+    }
+
+    await set(ref(db,`students/${currentUser.uid}/courseAccess/${studentGradeKey}/english/code`),code);
+    await logActivity('weekly_code_used',{courseId:'english',gradeKey:studentGradeKey,code:'[مخفي]'});
+    document.getElementById('activationCode').value='';
+    await loadCourseAccess();
+  }catch(e){
+    console.error('Weekly code activation failed:',e);
+    status.textContent='تعذر تفعيل الكود: '+(e.code||e.message||'خطأ غير معروف');
+  }
+}
+
+// تسجيل تشغيل/انتهاء فيديو الورشة من مشغل YouTube المضمّن.
+let workshopPlayer = null;
+window.onYouTubeIframeAPIReady = function () {
+  const frame = document.getElementById('workshopVideo');
+  if (!frame || !window.YT || !window.YT.Player) return;
+  workshopPlayer = new window.YT.Player('workshopVideo', {
+    events: {
+      onStateChange: event => {
+        if (event.data === window.YT.PlayerState.PLAYING) {
+          logActivity('workshop_video_started', { videoTitle: workshop.title, videoId: 'wp7pp7lkRkM' });
+        } else if (event.data === window.YT.PlayerState.ENDED) {
+          logActivity('workshop_video_completed', { videoTitle: workshop.title, videoId: 'wp7pp7lkRkM' });
+        }
+      }
+    }
+  });
+};
+const ytScript = document.createElement('script');
+ytScript.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(ytScript);
+
+// إتاحة الدوال التي تستدعيها أزرار HTML من داخل script type="module".
+Object.assign(window, {
+  openCourse,
+  closeCourse,
+  redeemCode
+});
+</script>
+</body>
+</html>
