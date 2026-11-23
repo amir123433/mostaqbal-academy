@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f">
+<title>امتحان المحاضرة | Mostaqbal Academy</title>
+<style>
+:root{font-family:Tahoma,Arial,sans-serif;color:#eef4ff;background:#07111f;--panel:#0d1b2d;--line:#233b58;--muted:#9fb0c8;--blue:#3b9be8;--green:#34d399;--red:#f87171}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#123052 0,#07111f 60%)}main{width:min(900px,94%);margin:28px auto;padding-bottom:40px}.top,.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:bold}.muted{color:var(--muted);font-size:13px;line-height:1.8}.btn{display:inline-block;border:1px solid var(--line);border-radius:11px;padding:11px 15px;background:#14263c;color:#eef4ff;text-decoration:none;font:inherit;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#2563eb,#0284c7);border:0;font-weight:bold}.btn:disabled{opacity:.55;cursor:not-allowed}h1{font-size:23px;margin:8px 0}h2{font-size:18px;margin:0 0 12px}.question{background:#11243a;border:1px solid #2a405c;border-radius:14px;padding:16px;margin:12px 0}.question-title{font-weight:bold;line-height:1.8;margin-bottom:12px}.option{display:flex;align-items:center;gap:9px;padding:10px;border-radius:10px;margin:7px 0;background:#0b1a2b;cursor:pointer}.option input{accent-color:#60a5fa;width:17px;height:17px}.status{padding:12px;border-radius:11px;background:#12243a;color:#cfe3ff;line-height:1.8;margin:12px 0}.result-score{font-size:30px;font-weight:bold;color:#86efac}.review-item{padding:13px;border:1px solid var(--line);border-radius:12px;margin:10px 0;line-height:1.8}.correct{color:#6ee7b7}.wrong{color:#fca5a5}.empty{text-align:center;padding:22px;color:var(--muted);line-height:1.9}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+
+/* MOSTAQBAL ACADEMY — DARK PREMIUM VISUAL REFRESH */
+:root{
+  --bg:#050b16;--panel:#0b1728;--panel2:#10223a;--text:#f3f7ff;
+  --muted:#9eafc8;--line:#243b5c;--accent:#397dff;--green:#65dfc0;
+  --blue:#397dff;--p2:#10223a;
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(44,104,202,.20),transparent 34%),
+    radial-gradient(ellipse at 88% 18%,rgba(31,137,181,.13),transparent 28%),
+    linear-gradient(145deg,#050b16 0%,#081426 52%,#07101e 100%) !important;
+  background-attachment:fixed !important;
+}
+header,.top,.topbar,.sidebar,.panel,.card,.stat,.hero,.welcome,.site-footer,.chapter-card,
+.content-item,.student,.event,.result,.ticket,.support-choice,.modal-card{
+  border-color:rgba(112,157,218,.19) !important;
+  box-shadow:0 14px 38px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.025);
+}
+header,.top,.topbar,.panel,.card,.stat,.hero,.welcome,.site-footer,.chapter-card,
+.content-item,.student,.event,.result,.ticket,.support-choice,.modal-card{
+  backdrop-filter:blur(14px);
+}
+h1,h2,h3,strong{letter-spacing:-.25px}
+button,.btn,a.btn{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,filter .22s ease;
+}
+button:hover,.btn:hover,a.btn:hover{
+  transform:translateY(-2px);filter:brightness(1.08);
+  box-shadow:0 9px 24px rgba(31,105,235,.20);
+}
+button:active,.btn:active{transform:translateY(0) scale(.985)}
+input,textarea,select{
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+input:focus,textarea:focus,select:focus{
+  outline:none !important;border-color:#5795ff !important;
+  box-shadow:0 0 0 3px rgba(57,125,255,.15) !important;
+}
+.logo,.course-icon,.journey-icon,.stat-icon,.footer-logo{
+  box-shadow:0 8px 24px rgba(37,99,235,.18);
+}
+.card,.stat,.panel,.course,.lesson,.quick,.chapter-card,.content-item{
+  transition:border-color .22s ease,transform .22s ease,box-shadow .22s ease;
+}
+.card:hover,.stat:hover,.course:hover,.quick:hover,.content-item:hover{
+  border-color:rgba(91,151,255,.42) !important;
+}
+::selection{background:rgba(57,125,255,.35);color:#fff}
+@keyframes premiumFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes premiumGlow{0%,100%{opacity:.45}50%{opacity:.85}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+</style></head>
+<body><main>
+<header class="top"><div><div class="brand">🎓 Mostaqbal Academy</div><div class="muted">اختبار المحاضرة</div></div><a class="btn" href="courses.html">العودة للكورس</a></header>
+<section class="card"><div class="muted" id="gradeLabel">جارٍ التحقق من الحساب والاشتراك...</div><h1 id="examTitle">امتحان المحاضرة</h1><p class="muted" id="examDescription">أجب عن الأسئلة ثم اضغط تسليم الامتحان لعرض نتيجتك.</p></section>
+<section class="card" id="examArea"><div class="empty">جارٍ تحميل الامتحان...</div></section>
+<section class="card" id="resultArea" hidden><h2>نتيجتك</h2><div class="result-score" id="scoreText"></div><p class="muted" id="scoreDetails"></p><div id="reviewArea"></div><div class="actions"><a class="btn primary" href="student.html#exams">عرض النتائج في ملف الطالب</a><a class="btn" href="courses.html">العودة للمحاضرات</a></div></section>
+</main>
+<script type="module">
+import{initializeApp}from'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import{getAuth,onAuthStateChanged}from'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import{getDatabase,ref,get,push,set}from'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+const cfg={apiKey:'AIzaSyDtyyxxeUvmjon7tivpS1Kga2GdXlnCaQ4',authDomain:'mostaqbal-academy-5f51b.firebaseapp.com',databaseURL:'https://mostaqbal-academy-5f51b-default-rtdb.europe-west1.firebasedatabase.app',projectId:'mostaqbal-academy-5f51b',appId:'1:398450175799:web:83a302dac12387bc3234b2'};
+const app=initializeApp(cfg),auth=getAuth(app),db=getDatabase(app),$=id=>document.getElementById(id);
+const params=new URLSearchParams(location.search),gradeKey=params.get('grade')||'',chapterId=params.get('chapter')||'',lectureId=params.get('lecture')||'';
+const gradeLabels={first_secondary:'أولى ثانوي',second_secondary:'تانية ثانوي',third_secondary:'تالتة ثانوي'};
+let currentUser=null,examData=null,questionList=[],submitted=false;
+function showError(message){$('examArea').innerHTML='';const d=document.createElement('div');d.className='empty';d.textContent=message;$('examArea').append(d)}
+function safeKey(v){return /^[A-Za-z0-9_-]{1,180}$/.test(v)}
+async function logActivity(action,details={}){try{if(!currentUser)return;const r=push(ref(db,'activityLogs/'+currentUser.uid));await set(r,{action,details,at:Date.now(),page:'exam.html'})}catch(e){console.warn('activity log',e)}}
+async function verifyAccess(){if(!currentUser)throw new Error('سجّل الدخول بحساب الطالب أولًا.');if(!['first_secondary','second_secondary','third_secondary'].includes(gradeKey)||!safeKey(chapterId)||!safeKey(lectureId))throw new Error('رابط الامتحان غير صحيح. افتح الامتحان من صفحة الكورس.');const st=await get(ref(db,'students/'+currentUser.uid));if(!st.exists())throw new Error('لم يتم العثور على ملف الطالب.');const student=st.val()||{},gradeText=String(student.grade||'').trim(),actualGrade=student.gradeKey||(['الأول الثانوي','أولى ثانوي'].includes(gradeText)?'first_secondary':['الثاني الثانوي','تانية ثانوي'].includes(gradeText)?'second_secondary':['الثالث الثانوي','تالتة ثانوي'].includes(gradeText)?'third_secondary':'');if(actualGrade!==gradeKey)throw new Error('هذا الامتحان غير مخصص لمرحلتك الدراسية.');let codeSnap=await get(ref(db,`students/${currentUser.uid}/courseAccess/${gradeKey}/english/code`));if(!codeSnap.exists()&&gradeKey==='third_secondary')codeSnap=await get(ref(db,`students/${currentUser.uid}/courseAccess/english/code`));if(!codeSnap.exists()||!codeSnap.val())throw new Error('فعّل الكورس بالكود الأسبوعي أولًا.');const code=String(codeSnap.val()).trim().toUpperCase(),cs=await get(ref(db,'courseCodes/'+code));if(!cs.exists())throw new Error('كود الاشتراك غير صالح.');const c=cs.val()||{};if(c.assignedUid!==currentUser.uid||c.redeemedBy!==currentUser.uid||c.courseId!=='english'||(c.gradeKey&&c.gradeKey!==gradeKey)||Number(c.expiresAt||0)<=Date.now())throw new Error('انتهت صلاحية اشتراك الكورس أو أن الكود غير صالح.');return student}
+function renderExam(){const area=$('examArea');area.innerHTML='';if(!questionList.length){showError('لم تتم إضافة أسئلة لهذا الامتحان حتى الآن.');return}const form=document.createElement('form');form.id='examForm';questionList.forEach((q,i)=>{const wrap=document.createElement('div');wrap.className='question';const title=document.createElement('div');title.className='question-title';title.textContent=`${i+1}. ${q.text} (${q.points} درجة)`;wrap.append(title);(q.options||[]).forEach((option,j)=>{const label=document.createElement('label');label.className='option';const input=document.createElement('input');input.type='radio';input.name='q_'+i;input.value=String(j);input.required=true;const text=document.createElement('span');text.textContent=option;label.append(input,text);wrap.append(label)});form.append(wrap)});const status=document.createElement('div');status.className='muted';status.textContent=`عدد الأسئلة: ${questionList.length} — راجع إجاباتك قبل التسليم.`;form.append(status);const submit=document.createElement('button');submit.className='btn primary';submit.type='submit';submit.textContent='تسليم الامتحان وتصحيح الإجابات';form.append(submit);form.onsubmit=async e=>{e.preventDefault();if(submitted)return;if(!confirm('هل أنت متأكد من تسليم إجاباتك؟'))return;submit.disabled=true;submit.textContent='جارٍ التصحيح وحفظ النتيجة...';try{const answers=questionList.map((q,i)=>{const picked=form.querySelector(`input[name="q_${i}"]:checked`);return picked?Number(picked.value):-1});if(answers.some(x=>x<0)){submit.disabled=false;submit.textContent='تسليم الامتحان وتصحيح الإجابات';alert('أجب عن جميع الأسئلة أولًا.');return}const total=questionList.reduce((n,q)=>n+Number(q.points||1),0);let score=0,correctCount=0;const review=questionList.map((q,i)=>{const correct=answers[i]===Number(q.correct);if(correct){score+=Number(q.points||1);correctCount++}return{question:q.text,options:q.options,answer:answers[i],correctAnswer:Number(q.correct),isCorrect:correct,points:Number(q.points||1)}});const examId=`english_${chapterId}_${lectureId}`;const attempt=push(ref(db,`examResults/${currentUser.uid}/${examId}/attempts`));const record={examId,examTitle:examData.title||'امتحان المحاضرة',courseId:'english',gradeKey,chapterId,lectureId,score,total,correctCount,questionCount:questionList.length,submittedAt:Date.now(),answers,review};await set(attempt,record);submitted=true;await logActivity('exam_submitted',{examId,examTitle:record.examTitle,score,total});showResult(record)}catch(err){console.error(err);alert('تعذر حفظ النتيجة: '+(err.code||err.message||'خطأ غير معروف'));submit.disabled=false;submit.textContent='إعادة محاولة التسليم'}};area.append(form)}
+function showResult(r){$('examArea').hidden=true;$('resultArea').hidden=false;$('scoreText').textContent=`${r.score} / ${r.total}`;$('scoreDetails').textContent=`إجابات صحيحة: ${r.correctCount} من ${r.questionCount} — النسبة: ${Math.round(r.score/r.total*100)}%`;$('reviewArea').innerHTML='';r.review.forEach((x,i)=>{const d=document.createElement('div');d.className='review-item';const q=document.createElement('strong');q.textContent=`${i+1}. ${x.question}`;const ans=document.createElement('div');ans.className=x.isCorrect?'correct':'wrong';ans.textContent='إجابتك: '+(x.options[x.answer]||'—');const correct=document.createElement('div');correct.className='correct';correct.textContent='الإجابة الصحيحة: '+(x.options[x.correctAnswer]||'');const points=document.createElement('div');points.className='muted';points.textContent=`${x.isCorrect?'حصلت على':'لم تحصل على'} ${x.isCorrect?x.points:0} من ${x.points} درجة`;d.append(q,ans,correct,points);$('reviewArea').append(d)})}
+async function start(){try{const student=await verifyAccess();$('gradeLabel').textContent=gradeLabels[gradeKey]+' · كورس اللغة الإنجليزية';const path=`courseContent/${gradeKey}/english/chapters/${chapterId}/lectures/${lectureId}`;let snap=await get(ref(db,path));if(!snap.exists()&&gradeKey==='third_secondary'){const legacy=await get(ref(db,`courseContent/english/chapters/${chapterId}/lectures/${lectureId}`));snap=legacy}if(!snap.exists())throw new Error('لم يتم العثور على المحاضرة أو الامتحان.');const lecture=snap.val()||{};examData=lecture.exam||{};questionList=Array.isArray(examData.questions)?examData.questions.filter(q=>q&&String(q.text||'').trim()&&Array.isArray(q.options)&&q.options.length>=2&&Number.isInteger(Number(q.correct))&&Number(q.correct)>=0&&Number(q.correct)<q.options.length):[];$('examTitle').textContent=examData.title||('امتحان '+(lecture.title||'المحاضرة'));$('examDescription').textContent='أجب عن كل الأسئلة، ثم سلّم إجاباتك لتظهر الدرجة والتصحيح.';await logActivity('exam_started',{examId:`english_${chapterId}_${lectureId}`,examTitle:examData.title||lecture.title||''});renderExam()}catch(e){showError(e.message||'تعذر تحميل الامتحان.')}}
+onAuthStateChanged(auth,async user=>{currentUser=user||null;if(!user){showError('سجّل الدخول بحساب الطالب أولًا.');return}await start()});
+</script></body></html>
